@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+}
+
+#sectionBuscador {
+    background-image: url("../images/fondo_playa.jpg");
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buscador {
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    min-width: 400px;
+    background-color: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "modo"
+    "origen"
+    "destino"
+    "buscar";
+}
+
+#modoVuelo {
+    grid-area: modo;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#origen {
+    display: flex;
+    flex-direction: column;
+    grid-area: origen;
+}
+
+/* #origen input {
+    background: url(images/comment-author.gif) no-repeat scroll 7px 7px;
+    padding-left:30px;  
+} */
+
+#destino {
+    display: flex;
+    flex-direction: column;
+    grid-area: destino;
+}
+
+#buscar {
+	box-shadow:inset 0px 1px 0px 0px #bee2f9;
+	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color:#43D4FF;
+	border-radius:6px;
+	border:1px solid #153E69;
+	display:inline-block;
+	cursor:pointer;
+	color:#153E69;
+	font-family:Arial;
+	font-size:16px;
+    height: 40px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #7cacde;
+}
+
+#buscar:hover {
+	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background-color:#468ccf;
+}
+
+
+#sectionOfertas {
+    background-color: azure;
+    /* height: 30vh; */
+    width: 100%;
+}
+
+#sectionPagos {
+    height: 60px;
+    width: 100%;
+}
+
+footer {
+    background-color: black;
+    height: 60px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+    #buscador {
+        max-width: 1200px;
+        min-width: 400px;
+        width: 80%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto auto 100px;
+        grid-template-areas: 
+        "modo modo modo"
+        "origen destino buscar";
+    }
+}
